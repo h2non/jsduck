@@ -11,8 +11,8 @@ the old [ext-doc][] was. It is used by Sencha to document [Ext JS
 products.
 
 The highlights of JSDuck are [Markdown][] support and keeping you DRY
-by inferring a lot of information from code.  Read the [Guide][] for
-full overview.
+by inferring a lot of information from code.  Read the
+[documentation][] for full overview.
 
 **New to JSDuck?** Watch [introductory talk by Nick Poulden][video]:
 
@@ -23,8 +23,8 @@ full overview.
 [Markdown]: http://daringfireball.net/projects/markdown/
 [ext4-docs]: http://docs.sencha.com/ext-js/4-0/
 [touch2-docs]: http://docs.sencha.com/touch/2-0/
-[other-docs]: http://docs.sencha.com/ext-js/4-0/
-[Guide]: https://github.com/senchalabs/jsduck/wiki/Guide
+[other-docs]: http://docs.sencha.com/
+[documentation]: https://github.com/senchalabs/jsduck/wiki
 [video]: http://vimeo.com/33465319
 
 Getting it
@@ -34,38 +34,12 @@ Standard rubygems install should do:
 
     $ [sudo] gem install jsduck
 
-If you encounter errors during gem installation, you may need to
-install the header files for compiling extension modules for Ruby 1.9.
-For Debian systems you'll need the `ruby1.9-dev` package.  For Red Hat
-/ CentOS / Fedora use the `ruby-devel` package.
+Windows users probably want to [download a binary release][winbin].
 
-In **OSX Mountain Lion** the compilation of `therubyracer` dependency
-often fails for so far unknown reasons.  Most users have found a
-solution in upgrading to Ruby 1.9 using [RVM][].
+See the [installation guide][] for help when you run into problems.
 
-For **Windows** users out there, you can download the binary version,
-which includes Ruby interpreter and all dependencies bundled in a
-single .exe file.  Grab it from the [download page][].
-
-Alternatively you can install through rubygems, but you need to do
-some additional tweaks. First go and [download][libs download]
-therubyracer gem and v8 lib that stereobooster has built for
-windows. You need to install this special rubyracer version instead of
-the one from rubygems:
-
-    > gem install therubyracer-0.11.0beta1-x86-mingw32.gem
-
-To make it actually work you need `v8.dll` somewhere in your
-system. Extract the `lib_v8.3.11.9.zip` take the `v8.dll` inside it
-and place into the `bin` directory of your Ruby installation (other
-dirs that are on your PATH can work too, but I've found this to be the
-most sensible place to put it). Now you're ready to install JSDuck:
-
-    > gem install jsduck
-
-[RVM]: https://rvm.io/
-[download page]: https://sourceforge.net/projects/jsduck/files/
-[libs download]: https://github.com/stereobooster/therubyracer/downloads
+[winbin]: https://sourceforge.net/projects/jsduck/files/
+[installation guide]: https://github.com/senchalabs/jsduck/wiki/Installation
 
 Usage
 -----
@@ -112,21 +86,15 @@ directories:
 Note that the resulting documentation will only contain the API
 documentation.  Guides, videos and examples will not be present.
 These can be added using more command line options as explained in the
-[Advanced Usage][adv] section of wiki.
-
-[adv]: https://github.com/senchalabs/jsduck/wiki/Advanced-Usage
+[documentation][].
 
 
 Documenting your code
 ---------------------
 
-For quick overview read the [Guide][] and take a look at [example.js][example].
-Follow links in the guide to digg into the details.
-
-Looking for specific @tag? Take a look at the [whole list of supported tags][tags].
+Read the [documentation][] and take a look at [example.js][example].
 
 [example]: https://github.com/senchalabs/jsduck/blob/master/opt/example.js
-[tags]: https://github.com/senchalabs/jsduck/wiki/Tags
 
 
 Hacking it
@@ -173,6 +141,7 @@ Katherine Chu,
 [vjetteam](https://github.com/vjetteam),
 [Chris Westbrook](https://github.com/cnstaging),
 [Scott Whittaker](https://github.com/scottrobertwhittaker),
+[Timo Tijhof](https://github.com/Krinkle),
 and many-many others who reported bugs, submitted patches, and
 provided a lot of useful input.
 
